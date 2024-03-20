@@ -1,0 +1,45 @@
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* This spreads out the cards evenly */
+    padding: 20px; /* Adds some padding around the gallery */
+}
+
+.card {
+    width: 200px; /* Adjust based on your preference */
+    height: 300px; /* Adjust based on your preference */
+    margin: 10px; /* Adds space between cards */
+    perspective: 1000px;
+    cursor: pointer;
+}
+
+.card-face {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    transition: transform 0.6s linear;
+}
+
+.front {
+    transform: rotateY(0deg);
+}
+
+.back {
+    transform: rotateY(180deg);
+}
+
+.card.flipped .front {
+    transform: rotateY(-180deg);
+}
+
+.card.flipped .back {
+    transform: rotateY(0deg);
+}
+
+/* Adjust as necessary for your images */
+.card img {
+    width: 75%;
+    height: 75%;
+    object-fit: contain;
+}

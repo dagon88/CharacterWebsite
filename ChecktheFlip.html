@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Character Gallery</title>
+    <!-- Linking a hosted CSS file -->
+    <link rel="stylesheet" href="https://hillsborough-my.sharepoint.com/:u:/r/personal/147731_hcps_net/Documents/style.css?csf=1&web=1&e=xqELum">
+    <!-- Inline styles for demonstration. You should move this to your external CSS file -->
+    <style>
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 0;
+            margin: 0;
+        }
+        .card {
+            width: calc(100% / 5);
+            height: 300px;
+            perspective: 1000px;
+            cursor: pointer;
+            position: relative;
+        }
+        .card-face {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            backface-visibility: hidden;
+            transition: transform 0.6s linear;
+        }
+        .front {
+            transform: rotateY(0deg);
+        }
+        .back {
+            transform: rotateY(180deg);
+        }
+        .card.flipped .front {
+            transform: rotateY(-180deg);
+        }
+        .card.flipped .back {
+            transform: rotateY(0deg);
+        }
+    </style>
+</head>
+<body>
+
+<div class="gallery">
+    <!-- Card 1 -->
+    <div class="card" onclick="this.classList.toggle('flipped');">
+        <div class="card-face front">
+            <img src="https://hillsborough-my.sharepoint.com/:i:/r/personal/147731_hcps_net/Documents/Pics/wild%20things.jpg?csf=1&web=1&e=5m0cYb" alt="Wild Things Front">
+        </div>
+        <div class="card-face back">
+            <!-- Replace with the appropriate back image URL -->
+            <img src="BACK_IMAGE_URL" alt="Wild Things Back">
+        </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="card" onclick="this.classList.toggle('flipped');">
+        <div class="card-face front">
+            <img src="https://hillsborough-my.sharepoint.com/:i:/r/personal/147731_hcps_net/Documents/Pics/bad%20case%20of%20strpies.jpg?csf=1&web=1&e=Ds3LvF" alt="Bad Case of Stripes Front">
+        </div>
+        <div class="card-face back">
+            <!-- Replace with the appropriate back image URL -->
+            <img src="BACK_IMAGE_URL" alt="Bad Case of Stripes Back">
+        </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="card" onclick="this.classList.toggle('flipped');">
+        <div class="card-face front">
+            <img src="https://hillsborough-my.sharepoint.com/:i:/r/personal/147731_hcps_net/Documents/Pics/bats%20library.jpeg?csf=1&web=1&e=FZTZfk" alt="Bats at the Library Front">
+        </div>
+        <div class="card-face back">
+            <!-- Replace with the appropriate back image URL -->
+            <img src="BACK_IMAGE_URL" alt="Bats at the Library Back">
+        </div>
+    </div>
+    <!-- Card 4 -->
+    <div class="card" onclick="this.classList.toggle('flipped');">
+    <div class="card-face front">
+        <img src="https://hillsborough-my.sharepoint.com/:i:/r/personal/147731_hcps_net/Documents/Pics/bear_karma%20wilson.jpg?csf=1&web=1&e=D9p8U8" alt="Bear Karma Wilson Front">
+    </div>
+    <div class="card-face back">
+        <img src="BACK_IMAGE_URL" alt="Bear Karma Wilson Back">
+    </div>
+</div>
+
+<!-- Card 5 -->
+<div class="card" onclick="this.classList.toggle('flipped');">
+    <div class="card-face front">
+        <img src="https://hillsborough-my.sharepoint.com/:i:/r/personal/147731_hcps_net/Documents/Pics/bed%20kitty.png?csf=1&web=1&e=fCWJHd" alt="Bed Kitty Front">
+    </div>
+    <div class="card-face back">
+        <img src="BACK_IMAGE_URL" alt="Bed Kitty Back">
+    </div>
+</div>
+
+<!-- Card 6 -->
+<div class="card" onclick="this.classList.toggle('flipped');">
+    <div class="card-face front">
+        <img src="https://hillsborough-my.sharepoint.com/:i:/r/personal/147731_hcps_net/Documents/Pics/Berenstain_Bears.jpg?csf=1&web=1&e=DSZfWX" alt="Berenstain Bears Front">
+    </div>
+    <div class="card-face back">
+        <img src="BACK_IMAGE_URL" alt="Berenstain Bears Back">
+    </div>
+</div>
+
+<!-- Card 7 -->
+<div class="card" onclick="this.classList.toggle('flipped');">
+    <div class="card-face front">
+        <img src="https://hillsborough-my.sharepoint.com/:i:/r/personal/147731_hcps_net/Documents/Pics/biscuit.jpg?csf=1&web=1&e=loQMiL" alt="Biscuit Front">
+    </div>
+    <div class="card-face back">
+        <img src="BACK_IMAGE_URL" alt="Biscuit Back">
+    </div>
+</div>
+
+<!-- Card 8 -->
+<div class="card" onclick="this.classList.toggle('flipped');">
+    <div class="card-face front">
+        <img src="https://hillsborough-my.sharepoint.com/:i:/r/personal/147731_hcps_net/Documents/Pics/black%20lagoon.png?csf=1&web=1&e=LwSAHv" alt="Black Lagoon Front">
+    </div>
+    <div class="card-face back">
+        <img src="BACK_IMAGE_URL" alt="Black Lagoon Back">
+    </div>
+</div>
+
+<!-- Card 9 -->
+<div class="card" onclick="this.classList.toggle('flipped');">
+    <div class="card-face front">
+        <img src="https://hillsborough-my.sharepoint.com/:i:/r/personal/147731_hcps_net/Documents/Pics/clickety%20clack.jpg?csf=1&web=1&e=cS7MVy" alt="Clickety Clack Front">
+    </div>
+    <div class="card-face back">
+        <img src="BACK_IMAGE_URL" alt="Clickety Clack Back">
+    </div>
+</div>
+
+<!-- Card 10 -->
+<div class="card" onclick="this.classList.toggle('flipped');">
+    <div class="card-face front">
+        <img src="https://hillsborough-my.sharepoint.com/:i:/r/personal/147731_hcps_net/Documents/Pics/clifford.jpg?csf=1&web=1&e=UcAd6G" alt="Clifford Front">
+    </div>
+    <div class="card-face back">
+        <img src="BACK_IMAGE_URL" alt="Clifford Back">
+    </div>
+</div>
+<!-- Card 11 -->
+<div class="card" onclick="this.classList.toggle('flipped');">
+    <div class="card-face front">
+        <img src="https://hillsborough-my.sharepoint.com/:i:/r/personal/147731_hcps_net/Documents/Pics/cloudette.jpg?csf=1&web=1&e=KaRLNs" alt="Cloudette Front">
+    </div>
+    <div class="card-face back">
+        <img src="BACK_IMAGE_URL" alt="Cloudette Back">
+    </div>
+</div>
+
+<!-- Card 12 -->
+<div class="card" onclick="this.classList.toggle('flipped');">
+    <div class="card-face front">
+        <img src="https://hillsborough-my.sharepoint.com/:i:/r/personal/147731_hcps_net/Documents/Pics/curdoroy.jpg?csf=1&web=1&e=keggIx" alt="Corduroy Front">
+    </div>
+    <div class="card-face back">
+        <img src="BACK_IMAGE_URL" alt="Corduroy Back">
+    </div>
+</div>
+
+<!-- Card 13 -->
+<div class="card" onclick="this.classList.toggle('flipped');">
+    <div class="card-face front">
+        <img src="https://hillsborough-my.sharepoint.com/:i:/r/personal/147731_hcps_net/Documents/Pics/curious%20geroge.jpg?csf=1&web=1&e=QUQsXy" alt="Curious George Front">
+    </div>
+    <div class="card-face back">
+        <img src="BACK_IMAGE_URL" alt="Curious George Back">
+    </div>
+</div>
+
+<!-- Card 14 -->
+<div class="card" onclick="this.classList.toggle('flipped');">
+    <div class="card-face front">
+        <img src="https://hillsborough-my.sharepoint.com/:i:/r/personal/147731_hcps_net/Documents/Pics/detective%20larue.jpg?csf=1&web=1&e=afO8eo" alt="Detective LaRue Front">
+    </div>
+    <div class="card-face back">
+        <img src="BACK_IMAGE_URL" alt="Detective LaRue Back">
+    </div>
+</div>
+
+<!-- Card 15 -->
+<div class="card" onclick="this.classList.toggle('flipped');">
+    <div class="card-face front">
+        <img src="https://hillsborough-my.sharepoint.com/:i:/r/personal/147731_hcps_net/Documents/Pics/dr%20seuss.jpg?csf=1&web=1&e=qrLJfs" alt="Dr. Seuss Front">
+    </div>
+    <div class="card-face back">
+        <img src="BACK_IMAGE_URL" alt="Dr. Seuss Back">
+    </div>
+</div>
+
+<!-- Card 16 -->
+<div class="card" onclick="this.classList.toggle('flipped');">
+    <div class="card-face front">
+        <img src="https://hillsborough-my.sharepoint.com/:i:/r/personal/147731_hcps_net/Documents/Pics/Rocket.jpg?csf=1&web=1&e=mpwo6d" alt="Rocket Front">
+    </div>
+    <div class="card-face back">
+        <img src="BACK_IMAGE_URL" alt="Rocket Back">
+    </div>
+</div>
+
+<!-- Card 17 -->
+<div class="card" onclick="this.classList.toggle('flipped');">
+    <div class="card-face front">
+        <img src="https://hillsborough-my.sharepoint.com/:i:/r/personal/147731_hcps_net/Documents/Pics/star%20wars.png?csf=1&web=1&e=xrD62K" alt="Star Wars Front">
+    </div>
+    <div class="card-face back">
+        <img src="BACK_IMAGE_URL" alt="Star Wars Back">
+    </div>
+</div>
+
+<!-- Card 18 -->
+<div class="card" onclick="this.classList.toggle('flipped');">
+    <div class="card-face front">
+        <img src="https://hillsborough-my.sharepoint.com/:i:/r/personal/147731_hcps_net/Documents/Pics/petecat.jpg?csf=1&web=1&e=dgeIOc" alt="Pete the Cat Front">
+    </div>
+    <div class="card-face back">
+        <img src="BACK_IMAGE_URL" alt="Pete the Cat Back">
+    </div>
+</div>
+
+<!-- Card 19 -->
+<div class="card" onclick="this.classList.toggle('flipped');">
+    <div class="card-face front">
+        <img src="https://hillsborough-my.sharepoint.com/:i:/r/personal/147731_hcps_net/Documents/Pics/Pinklicious.jpg?csf=1&web=1&e=LKXcuJ" alt="Pinkalicious Front">
+    </div>
+    <div class="card-face back">
+        <img src="BACK_IMAGE_URL" alt="Pinkalicious Back">
+    </div>
+</div>
+
+<!-- Card 20 -->
+<div class="card" onclick="this.classList.toggle('flipped');">
+    <div class="card-face front">
+        <img src="https://hillsborough-my.sharepoint.com/:i:/r/personal/147731_hcps_net/Documents/Pics/peach%20crayon.jpg?csf=1&web=1&e=ZXQMlQ" alt="Peach Crayon Front">
+    </div>
+    <div class="card-face back">
+        <img src="BACK_IMAGE_URL" alt="Peach Crayon Back">
+    </div>
+</div>
+
+<!-- Card 21 -->
+<div class="card" onclick="this.classList.toggle('flipped');">
+    <div class="card-face front">
+        <img src="https://hillsborough-my.sharepoint.com/:i:/r/personal/147731_hcps_net/Documents/Pics/hungry%20caterpillar.png?csf=1&web=1&e=KMSELf" alt="The Very Hungry Caterpillar Front">
+    </div>
+    <div class="card-face back">
+        <img src="BACK_IMAGE_URL" alt="The Very Hungry Caterpillar Back">
+    </div>
+</div>
+
+<!-- Card 22 -->
+<div class="card" onclick="this.classList.toggle('flipped');">
+    <div class="card-face front">
+        <img src="https://hillsborough-my.sharepoint.com/:i:/r/personal/147731_hcps_net/Documents/Pics/if%20you%20take%20a.png?csf=1&web=1&e=qh3Z1Q" alt="If You Take a Mouse to School Front">
+    </div>
+    <div class="card-face back">
+        <img src="BACK_IMAGE_URL" alt="If You Take a Mouse to School Back">
+    </div>
+</div>
+
+<!-- Card 23 -->
+<div class="card" onclick="this.classList.toggle('flipped');">
+    <div class="card-face front">
+        <img src="https://hillsborough-my.sharepoint.com/:i:/r/personal/147731_hcps_net/Documents/Pics/fancy%20nancy.jpeg?csf=1&web=1&e=JBF3kM" alt="Fancy Nancy Front">
+    </div>
+    <div class="card-face back">
+        <img src="BACK_IMAGE_URL" alt="Fancy Nancy Back">
+    </div>
+</div>
+
+<!-- Card 24 -->
+<div class="card" onclick="this.classList.toggle('flipped');">
+    <div class="card-face front">
+        <img src="https://hillsborough-my.sharepoint.com/:i:/r/personal/147731_hcps_net/Documents/Pics/mo-willems-characters.jpg?csf=1&web=1&e=zfiiDu" alt="Mo Willems Characters Front">
+    </div>
+    <div class="card-face back">
+        <img src="BACK_IMAGE_URL" alt="Mo Willems Characters Back">
+    </div>
+</div>
+
+
+</div>
+
+<!-- Linking a hosted JavaScript file -->
+<script src="https://hillsborough-my.sharepoint.com/:u:/r/personal/147731_hcps_net/Documents/script.js?csf=1&web=1&e=PiB8b7"></script>
+<!-- Inline script for demonstration. Ideally, this should be part of your external JavaScript file -->
+<script>
+    document.querySelectorAll('.card').forEach(card => {
+        card.addEventListener('click', function() {
+            this.classList.toggle('flipped');
+        });
+    });
+</script>
+
+</body>
+</html>
