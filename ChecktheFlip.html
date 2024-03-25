@@ -10,13 +10,13 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around; /* This spreads out the cards evenly */
-    padding: 20px; /* Adds some padding around the gallery */
+    padding: 10px; /* Adds some padding around the gallery */
 }
 
 .card {
     width: 200px; /* Adjust based on your preference */
     height: 300px; /* Adjust based on your preference */
-    margin: 10px; /* Adds space between cards */
+    margin: 5px; /* Adds space between cards */
     perspective: 1000px;
     cursor: pointer;
 }
@@ -58,6 +58,11 @@
     object-fit: contain;
 }
         </style>
+    <script> document.querySelectorAll('.card').forEach(card => {
+  card.addEventListener('click', function() {
+    this.classList.toggle('flipped');
+  });
+});</script>
   
 </head>
 <body>
@@ -307,12 +312,7 @@
 
 </div>
 
-<!-- Linking a hosted JavaScript file -->
-<script> document.querySelectorAll('.card').forEach(card => {
-  card.addEventListener('click', function() {
-    this.classList.toggle('flipped');
-  });
-});</script>
+
 
 
 </script>
