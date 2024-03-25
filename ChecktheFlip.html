@@ -4,52 +4,105 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book Character Gallery</title>
-    <style>
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-            grid-auto-rows: 450px; /* Set to the max card height for consistency */
-            gap: 20px;
-            padding: 10px;
-            justify-items: center;
+
+<style>
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    grid-auto-rows: auto; /* Adjust based on content */
+    gap: 20px; /* Adjust space between cards */
+    padding: 10px;
+    justify-items: center;
+}
+
+
+.card {
+    width: 300px; /* Adjust based on your preference */
+    height: 450px; /* Adjust based on your preference */
+    margin: 5px; /* Adds space between cards */
+    perspective: 1000px;
+    cursor: pointer;
+}
+    
+.card.large {
+    grid-column: span 2;
+}
+
+.card.small {
+    grid-column: span 1;
+}
+
+
+
+}
+.card-face img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* This will cover the area without breaking aspect ratio */
+}
+
+.card-face {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+    backface-visibility: hidden;
+    transition: transform 0.6s linear;
+}
+
+.front {
+    transform: rotateY(0deg);
+}
+
+.back {
+    transform: rotateY(180deg);
+}
+    .card.flipped {
+    width: 800px; /* Larger width */
+    height: 600px; /* Larger height */
+    /* Optionally, adjust the margin to center or space out the larger cards */
+}
+
+.card.flipped .front {
+    transform: rotateY(-180deg);
+}
+
+.card.flipped .back {
+    transform: rotateY(0deg);
+}
+
+/* Adjust as necessary for your images */
+.card img {
+    width: 110%;
+    height: 110%;
+    object-fit: contain;
+}
+        </style>
+    <script> document.querySelectorAll('.card').forEach(card => {
+  card.addEventListener('click', function() {
+    this.classList.toggle('flipped');
+      <script>
+document.addEventListener('DOMContentLoaded', (event) => {
+    const cards = document.querySelectorAll('.card');
+    cards.forEach(card => {
+        // Randomly assign the card as large or small
+        const isLarge = Math.random() < 0.3; // 30% chance to be large
+        if (isLarge) {
+            card.classList.add('large');
+        } else {
+            card.classList.add('small');
         }
-        .card {
-            width: 300px; /* Consistent card width */
-            height: 450px; /* Consistent card height */
-            perspective: 1000px;
-            cursor: pointer;
-        }
-        .card-face {
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            backface-visibility: hidden;
-            transition: transform 0.6s linear;
-        }
-        .front {
-            transform: rotateY(0deg);
-        }
-        .back {
-            transform: rotateY(180deg);
-        }
-        .card.flipped .front {
-            transform: rotateY(-180deg);
-        }
-        .card.flipped .back {
-            transform: rotateY(0deg);
-        }
-        .card img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-    </style>
+    });
+});
+</script>
+
+  });
+});</script>
+  
 </head>
 <body>
 
 <div class="gallery">
-    <!-- Cards go here -->
-    <div class="gallery">
     <!-- Card 1 -->
     <div class="card" onclick="this.classList.toggle('flipped');">
         <div class="card-face front">
@@ -289,30 +342,9 @@
     <div class="card-face back">
         <img src="https://github.com/dagon88/CharacterWebsite/blob/main/Shelf%20pic2.png?raw=true" alt="Mo Willems Characters Back">
     </div>
-
 </div>
 
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-        document.querySelectorAll('.card').forEach(card => {
-            card.addEventListener('click', function() {
-                this.classList.toggle('flipped');
-            });
-        });
-    });
-</script>
-
-</body>
-</html>
-
-
-
-
-
 </div>
-
-
-
 
 </script>
 
