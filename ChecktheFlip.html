@@ -57,7 +57,7 @@
     height: 75%;
     object-fit: contain;
 }
-        <style>
+        <style/>
   
 </head>
 <body>
@@ -308,7 +308,11 @@
 </div>
 
 <!-- Linking a hosted JavaScript file -->
-<script src="https://cdn.jsdelivr.net/gh/dagon88/CharacterWebsite@main/script.js"></script>
+<script> document.querySelectorAll('.card').forEach(card => {
+  card.addEventListener('click', function() {
+    this.classList.toggle('flipped');
+  });
+});</script>
 
 
 </script>
