@@ -80,6 +80,21 @@
     <script> document.querySelectorAll('.card').forEach(card => {
   card.addEventListener('click', function() {
     this.classList.toggle('flipped');
+      <script>
+document.addEventListener('DOMContentLoaded', (event) => {
+    const cards = document.querySelectorAll('.card');
+    cards.forEach(card => {
+        // Randomly assign the card as large or small
+        const isLarge = Math.random() < 0.3; // 30% chance to be large
+        if (isLarge) {
+            card.classList.add('large');
+        } else {
+            card.classList.add('small');
+        }
+    });
+});
+</script>
+
   });
 });</script>
   
