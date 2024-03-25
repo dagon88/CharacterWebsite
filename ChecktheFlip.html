@@ -7,11 +7,14 @@
 
 <style>
 .gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around; /* This spreads out the cards evenly */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    grid-auto-rows: 240px; /* Adjust based on your preference */
+    gap: 15px; /* Adds space between cards */
     padding: 10px; /* Adds some padding around the gallery */
+    justify-content: space-around;
 }
+
 
 .card {
     width: 300px; /* Adjust based on your preference */
@@ -19,6 +22,17 @@
     margin: 5px; /* Adds space between cards */
     perspective: 1000px;
     cursor: pointer;
+    
+    .card.large {
+    grid-row: span 2; /* Makes the card span two rows */
+    grid-column: span 2; /* Makes the card span two columns */
+}
+
+.card.small {
+    grid-row: span 1;
+    grid-column: span 1;
+}
+
 }
 .card-face img {
     width: 100%;
